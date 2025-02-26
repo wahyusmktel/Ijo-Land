@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Age Detection - Landing Page Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">Landing Page</a>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="face_detection.html" class="active">Face Detection</a></li>
+                <li><a href="auth.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Face Detection Section -->
+    <div class="face-detection-container">
+        <div class="detection-header">
+            <h1>Face Age Detection</h1>
+            <p>Upload an image or use your webcam to detect faces and estimate age</p>
+        </div>
+
+        <div class="detection-controls">
+            <button id="webcamButton" class="detection-btn">
+                <i class="fas fa-camera"></i> Use Webcam
+            </button>
+            <label for="imageUpload" class="detection-btn">
+                <i class="fas fa-upload"></i> Upload Image
+            </label>
+            <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+        </div>
+
+        <div class="detection-content">
+            <div class="media-container">
+                <video id="webcam" autoplay playsinline style="display: none;"></video>
+                <canvas id="output"></canvas>
+                <img id="uploadedImage" style="display: none;">
+            </div>
+
+            <div class="detection-results">
+                <div class="result-card">
+                    <h3>Detection Results</h3>
+                    <div id="results" class="results-content">
+                        <p class="placeholder-text">No faces detected yet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Discover the power of AI-powered face detection technology.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="face_detection.html">Face Detection</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Face Detection Feature. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="face_detection.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
