@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Game - Modern School</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Modern School</div>
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#programs">Programs</a></li>
+            <li><a href="index.html#campus">Campus Life</a></li>
+            <li><a href="index.html#alumni">Alumni</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="game.html" class="active">Game</a></li>
+            <li><a href="auth.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="game-container">
+        <div class="game-header">
+            <h1>Sliding Puzzle Game</h1>
+            <div class="game-controls">
+                <select id="difficulty">
+                    <option value="3">Easy (3x3)</option>
+                    <option value="4">Medium (4x4)</option>
+                    <option value="5">Hard (5x5)</option>
+                </select>
+                <button id="start-game" class="btn">New Game</button>
+                <div class="game-stats">
+                    <span>Moves: <span id="moves">0</span></span>
+                    <span>Time: <span id="time">00:00</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="puzzle-container">
+            <div id="puzzle-board" class="puzzle-board"></div>
+        </div>
+
+        <div class="game-footer">
+            <button id="show-solution" class="btn">Show Solution</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
